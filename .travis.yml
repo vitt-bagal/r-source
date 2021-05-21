@@ -17,6 +17,11 @@ matrix:
       dist: xenial
       env:
         - CURL_VERSION=7.43.0 ZLIB_VERSION=1.2.8 PCRE_VERSION=8.38 PREFIX=$HOME/R-bin CRAN_WGET='https://cloud.r-project.org'
+    - os: linux
+      arch: s390x
+      dist: xenial
+      env:
+        - CURL_VERSION=7.43.0 ZLIB_VERSION=1.2.8 PCRE_VERSION=8.38 PREFIX=$HOME/R-bin CRAN_WGET='https://cloud.r-project.org'
 
 addons:
   apt:
@@ -117,3 +122,4 @@ deploy:
   on:
     repo: wch/r-source
     branch: build-trunk
+    
